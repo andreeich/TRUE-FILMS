@@ -14,112 +14,128 @@
 
   <link rel="shortcut icon" type="image/png" href="./favicon.png" />
 
-  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/style.scss" rel="stylesheet">
 
   <title>Home</title>
 </head>
 
-<body class="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen relative bg-slate-50 [--navbar-height:4rem]">
+<body class="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen relative [--navbar-height:81px]">
   <header>
-    <nav class="fixed w-full shadow-md bg-slate-50">
-      <div class="px-2 mx-auto max-w-[1536px] sm:px-6 lg:px-8">
-        <div class="relative z-10 flex items-center justify-between h-[var(--navbar-height)]">
+    <nav class="fixed w-full">
+      <div class="px-[24px] mx-auto max-w-[1536px]">
+        <div class="relative flex items-center justify-between h-[var(--navbar-height)]">
           <!-- desktop links -->
-          <a href="#" class="absolute inset-y-0 left-0 flex items-center flex-shrink-0">
-            <img class="w-auto h-8" src="https://placehold.co/300x200" alt="Brand logo">
+          <a href="#"
+            class="absolute inset-y-0 sm:left-0 left-1/2 -translate-x-1/2 sm:static flex items-center flex-shrink-0 sm:ml-[24px]">
+            <img class="w-auto h-[40px] sm:h-[54px]" src="./assets/images/logo.png" alt="TRUE FILMS">
           </a>
-          <div class="flex items-stretch justify-start flex-1 sm:items-center sm:justify-center">
-            <div class="hidden sm:block sm:ml-6">
-              <ul class="flex space-x-4">
+          <div class="flex items-stretch justify-center flex-1 sm:items-center">
+            <div class="hidden mx-2 sm:block">
+              <ul class="flex space-x-[20px] md:space-x-[30px] lg:space-x-[47px]">
                 <li class="inline-flex items-center"><a href="#"
-                    class="px-3 py-2 text-sm font-medium text-white transition-colors rounded-md shadow-sm bg-slate-600"
-                    aria-current="page">Home</a></li>
-                <li class="inline-flex items-center"><a href="./about.html"
-                    class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 hover:bg-slate-500 hover:text-white"
-                    aria-current="page">About</a></li>
-                <li class="inline-flex items-center">
-                  <div class="relative" data-type="dropdown">
-                    <button
-                      class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 hover:bg-slate-500 hover:text-white">Dropdown</button>
-                    <ul
-                      class="absolute min-w-full hidden left-0 flex-col gap-1 px-2 py-1 rounded-lg shadow-lg top-[calc(100%_+_.5em)] bg-slate-50 ring ring-slate-400">
-                      <li><a href="#"
-                          class="py-2 text-sm font-medium transition-colors text-slate-800 hover:text-slate-400">Anchor</a>
-                      </li>
-                      <hr>
-                      <li><a href="#"
-                          class="py-2 text-sm font-medium transition-colors text-slate-800 hover:text-slate-400">Anchor</a>
-                      </li>
-                      <li><a href="#"
-                          class="py-2 text-sm font-medium transition-colors text-slate-800 hover:text-slate-400">Anchor</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+                    class="transition-colors text-primary-400 hover:text-primary-200">About</a></li>
                 <li class="inline-flex items-center"><a href="#"
-                    class="px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 hover:bg-slate-500 hover:text-white"
-                    aria-current="page">Cap</a></li>
+                    class="transition-colors text-primary-400 hover:text-primary-200">Portfolio</a></li>
+                <li class="inline-flex items-center"><a href="#"
+                    class="transition-colors text-primary-400 hover:text-primary-200">Packages</a></li>
+                <li class="inline-flex items-center"><a href="#"
+                    class="transition-colors text-primary-400 hover:text-primary-200">Reviews</a></li>
+                <li class="inline-flex items-center"><a href="#"
+                    class="transition-colors text-primary-400 hover:text-primary-200">Contact Us</a></li>
               </ul>
             </div>
           </div>
+          <!-- social icons -->
+          <ul
+            class="absolute sm:static inset-y-0 right-0 hidden sm:flex items-center gap-[10px] md:gap-[17px] lg:gap-[25px]">
+            <li><a href="#" class="transition-colors icon-youtube text-primary-400 hover:text-primary-200"></a></li>
+            <li><a href="#" class="transition-colors icon-facebook text-primary-400 hover:text-primary-200"></a></li>
+            <li><a href="#" class="transition-colors icon-instagram text-primary-400 hover:text-primary-200"></a></li>
+          </ul>
           <!-- burger button -->
-          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <div class="absolute inset-y-0 right-0 z-10 flex items-center sm:hidden">
             <button type="button"
-              class="inline-flex items-center justify-center p-2 transition-colors rounded-md text-slate-600 hover:bg-slate-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-600"
+              class="inline-flex items-center justify-center p-2 transition-colors rounded-md text-primary-400 focus:outline-none focus:ring-2 focus:ring-inset w-[50px] h-[50px]"
               aria-controls="mobile-menu" data-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
-              <i data-icon-type="open" class="icon-[heroicons--bars-3] h-6 w-6"></i>
-              <i data-icon-type="close" class="icon-[heroicons--x-mark] h-6 w-6 hidden"></i>
+              <i data-icon-type="open" class="icon-[custom--bars-2] w-[37px] h-[16px]"></i>
+              <i data-icon-type="close" class="icon-[custom--x-mark] w-[28px] h-[28px] hidden"></i>
             </button>
           </div>
         </div>
         <!-- mobile menu -->
-        <div class="absolute invisible top-0 left-0 w-full bg-slate-50 pt-[var(--navbar-height)] sm:hidden shadow-md"
+        <div class="absolute invisible inset-0 w-full h-screen bg-white pt-[var(--navbar-height)] sm:hidden"
           id="mobile-menu">
-          <ul class="px-2 pt-2 pb-3 space-y-1 ">
-            <li class="flex"><a href="#"
-                class="flex-1 px-3 py-2 text-sm font-medium text-white transition-colors rounded-md bg-slate-600"
-                aria-current="page">Home</a></li>
-            <li class="flex"><a href="./about.html"
-                class="flex-1 px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 hover:bg-slate-500 hover:text-white"
-                aria-current="page">About</a></li>
-            <li class="flex">
-              <div class="relative flex flex-col flex-1" data-type="dropdown">
-                <button
-                  class="w-full px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 text-start hover:bg-slate-500 hover:text-white">Dropdown</button>
-                <ul
-                  class="sm:absolute min-w-full hidden left-0 flex-col gap-1 px-2 rounded-md top-[calc(100%_+_.5em)] sm:bg-gray-500">
-                  <li><a href="#"
-                      class="px-2 py-2 text-sm font-medium transition-colors text-slate-800 sm:px-0 hover:text-slate-400">Anchor</a>
-                  </li>
-                  <hr>
-                  <li><a href="#"
-                      class="px-2 py-2 text-sm font-medium transition-colors text-slate-800 sm:px-0 hover:text-slate-400">Anchor</a>
-                  </li>
-                  <li><a href="#"
-                      class="px-2 py-2 text-sm font-medium transition-colors text-slate-800 sm:px-0 hover:text-slate-400">Anchor</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="flex"><a href="#"
-                class="flex-1 px-3 py-2 text-sm font-medium transition-colors rounded-md text-slate-800 hover:bg-slate-500 hover:text-white"
-                aria-current="page">Cap</a></li>
-          </ul>
+          <div class="flex flex-col items-center justify-between h-full pt-[25px] pb-[55px] px-[60px]">
+            <ul class="text-center space-y-[35px]">
+              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">About</a>
+              </li>
+              <li><a href="#"
+                  class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Portfolio</a></li>
+              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Packages</a>
+              </li>
+              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Reviews</a>
+              </li>
+              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Contacts</a>
+              </li>
+            </ul>
+            <ul class="flex items-center justify-center gap-[69px] w-full">
+              <li><a href="#"
+                  class="icon-youtube w-[40px] h-[38px] text-primary-400 hover:text-primary-200 transition-colors"></a>
+              </li>
+              <li><a href="#"
+                  class="icon-facebook w-[40px] h-[38px] text-primary-400 hover:text-primary-200 transition-colors"></a>
+              </li>
+              <li><a href="#"
+                  class="icon-instagram w-[40px] h-[38px] text-primary-400 hover:text-primary-200 transition-colors"></a>
+              </li>
+            </ul>
+            <a href="#" class="flex items-center flex-shrink-0">
+              <img class="w-auto h-[44px]" src="./assets/images/logo.png" alt="TRUE FILMS">
+            </a>
+          </div>
         </div>
       </div>
     </nav>
   </header>
-  <main class="grid min-h-full mb-[var(--navbar-height)] px-6 py-24 bg-pattern place-items-center sm:py-32 lg:px-8">
-    <div class="text-center">
-      <p class="text-base font-semibold text-slate-600">404</p>
-      <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-800 sm:text-5xl">Page not found</h1>
-      <p class="mt-6 text-base leading-7 text-gray-600">Sorry, we couldn’t find the page you’re looking for.</p>
-      <div class="flex items-center justify-center mt-10 gap-x-6">
-        <a href="#" class="rounded-md bg-slate-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 transition-colors">Go back home</a>
-        <a href="#" class="text-sm font-semibold transition-colors text-slate-800">Contact support <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
+  <main class="grid place-items-center">
+    <button class="btn-hex">
+      <span>Send message</span>
+
+      <svg width="264px" height="112px" viewBox="0 0 264 112" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <polygon id="path-g-r5mtyqku-1"
+            points="253.76754 73.13178 253.76754 24.65118 126.88354 0.00013 126.88354 -1.77635684e-15 126.88354 0.00018 1.0658141e-14 28.75978 1.0658141e-14 77.24048 126.88354 101.89138 126.88354 101.89138 126.88354 101.89138">
+          </polygon>
+          <polygon id="path-g-r5mtyqku-3"
+            points="0 31.4268847 2.02938e-06 84.4036847 132 111.340985 264 79.9141847 264 26.9373847 132 2.24729699e-15">
+          </polygon>
+        </defs>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g>
+            <g transform="translate(5.116460, 4.724605)">
+              <mask id="mask-g-r5mtyqku-2" fill="white">
+                <use xlink:href="#path-g-r5mtyqku-1"></use>
+              </mask>
+              <g></g>
+              <polygon id="btn-hex-overflow" fill="currentColor" mask="url(#mask-g-r5mtyqku-2)"
+                points="253.65054 73.13156 253.65054 24.65096 126.76754 -0.00014 -0.11646 28.75956 -0.11646 77.24026 126.76754 101.89125">
+              </polygon>
+            </g>
+            <g>
+              <mask id="mask-g-r5mtyqku-4" fill="white">
+                <use xlink:href="#path-g-r5mtyqku-3"></use>
+              </mask>
+              <g></g>
+              <path
+                d="M0,84.4036847 L-6,84.4036847 L-6,89.3029847 L-1.1997,90.2825847 L0,84.4036847 Z M0,31.4268847 L-1.38965,25.5900847 L-6,26.6876847 L-6,31.4268847 L0,31.4268847 Z M132,111.340985 L130.8,117.219985 L132.1,117.484985 L133.39,117.177985 L132,111.340985 Z M264,79.9141847 L265.39,85.7509847 L270,84.6533847 L270,79.9141847 L264,79.9141847 Z M264,26.9373847 L270,26.9373847 L270,22.0380847 L265.2,21.0584847 L264,26.9373847 Z M132,0 L133.2,-5.87883526 L131.9,-6.14398526 L130.61,-5.83685526 L132,0 Z M6,84.4036847 L6,31.4268847 L-6,31.4268847 L-6,84.4036847 L6,84.4036847 Z M133.2,105.461985 L1.1997,78.5248847 L-1.1997,90.2825847 L130.8,117.219985 L133.2,105.461985 Z M262.61,74.0772847 L130.61,105.503985 L133.39,117.177985 L265.39,85.7509847 L262.61,74.0772847 Z M258,26.9373847 L258,79.9141847 L270,79.9141847 L270,26.9373847 L258,26.9373847 Z M130.8,5.87883474 L262.8,32.8161847 L265.2,21.0584847 L133.2,-5.87883526 L130.8,5.87883474 Z M1.38965,37.2637847 L133.39,5.83685474 L130.61,-5.83685526 L-1.38965,25.5900847 L1.38965,37.2637847 Z"
+                id="Shape" fill="currentColor" fill-rule="nonzero" mask="url(#mask-g-r5mtyqku-4)"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </button>
   </main>
   <footer></footer>
 

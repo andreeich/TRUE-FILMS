@@ -25,5 +25,6 @@ module.exports = {
     indent: [
       'warn',
     ],
+    'import/no-extraneous-dependencies': ['warn', { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
   },
 };
