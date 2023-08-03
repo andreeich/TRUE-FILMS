@@ -12,7 +12,7 @@
     @apply font-serif font-[18px];
   }
   h1 {
-    @apply text-[72px];
+    @apply text-[40px] sm:text-[72px];
   }
   h2 {
     @apply text-[56px] font-bold;
@@ -45,13 +45,13 @@
   }
 
   .btn-hex {
-    @apply w-[264px] h-[112px] relative text-white;
+    @apply w-[166px] h-[70px] sm:w-[264px] sm:h-[112px] relative text-white z-[1];
 
-    span {
-      @apply text-[32px] font-bold transition-colors duration-[400] ease-in-out;
+    &::after {
+      @apply text-[24px] sm:text-[32px] sm:font-bold transition-colors duration-[400] ease-in-out;
     }
     svg {
-      @apply absolute inset-0 w-[264px] h-[112px] text-primary-300 -z-10;
+      @apply absolute inset-0 w-[166px] h-[70px] sm:w-[264px] sm:h-[112px] text-primary-300 z-[-1];
     }
 
     &:hover {
