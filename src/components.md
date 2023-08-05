@@ -21,7 +21,7 @@
             <use xlink:href="#path-g-r5mtyqku-1"></use>
           </mask>
           <g></g>
-          <polygon id="btn-hex-overflow" fill="currentColor" mask="url(#mask-g-r5mtyqku-2)"
+          <polygon class="btn-hex-overflow" fill="currentColor" mask="url(#mask-g-r5mtyqku-2)"
             points="253.65054 73.13156 253.65054 24.65096 126.76754 -0.00014 -0.11646 28.75956 -0.11646 77.24026 126.76754 101.89125">
           </polygon>
         </g>

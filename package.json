@@ -36,6 +36,9 @@
     ".png$|.jpe?g$|.svg$": "assets/images/[name].[hash].[type]"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@splidejs/splide-extension-video": "^0.8.0",
     "animejs": "^3.2.1",
     "breakpoint-helper": "^2.0.4",
     "breakpoints-js": "^1.0.6",

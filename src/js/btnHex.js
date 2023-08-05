@@ -5,7 +5,7 @@ const setupBtnHex = (selector) => {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach((element) => {
-    const overflow = element.querySelector('#btn-hex-overflow');
+    const overflow = element.querySelector('.btn-hex-overflow');
     const duration = 400;
 
     const overflowDown = throttle(duration, () => {
