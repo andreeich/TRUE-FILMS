@@ -3,6 +3,8 @@ import { throttle } from 'throttle-debounce';
 
 // ? TOGGLE BUTTON selector
 const setupMobileMenu = (idSelector) => {
+  const html = document.querySelector('html');
+  const body = document.querySelector('body');
   const mobileMenu = document.querySelector(`#${idSelector}`);
   const toggleButton = document.querySelector(`[data-controls="${idSelector}"]`);
 
@@ -32,6 +34,11 @@ const setupMobileMenu = (idSelector) => {
         complete() {
           isOpen = false;
           mobileMenu.style.visibility = 'hidden';
+
+          html.classList.remove('max-sm:h-screen');
+          html.classList.remove('max-sm:overflow-hidden');
+          body.classList.remove('max-sm:h-screen');
+          body.classList.remove('max-sm:overflow-hidden');
         },
       });
       // change button icon to bars-3
@@ -45,6 +52,11 @@ const setupMobileMenu = (idSelector) => {
         begin() {
           isOpen = true;
           mobileMenu.style.visibility = 'visible';
+
+          html.classList.add('max-sm:h-screen');
+          html.classList.add('max-sm:overflow-hidden');
+          body.classList.add('max-sm:h-screen');
+          body.classList.add('max-sm:overflow-hidden');
         },
       });
       // change button icon to x-mark

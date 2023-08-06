@@ -42,6 +42,7 @@
     "animejs": "^3.2.1",
     "breakpoint-helper": "^2.0.4",
     "breakpoints-js": "^1.0.6",
+    "flowbite": "^1.8.1",
     "throttle-debounce": "^5.0.0"
   }
 }

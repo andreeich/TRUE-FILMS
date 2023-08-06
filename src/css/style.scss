@@ -179,3 +179,14 @@
   }
 
 }
+
+// datepicker
+.datepicker-controls{
+  @apply flex-1;
+  .view-switch {
+    @apply flex items-center justify-center flex-1 text-center px-[30px];
+    span {
+      @apply flex-1;
+    }
+  }
+}

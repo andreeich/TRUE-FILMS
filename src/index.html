@@ -493,42 +493,60 @@
     <section class="pt-[88px] sm:pt-[130px] pb-[105px]">
       <form class="flex flex-col items-center px-[16px]">
         <h2>Let's Chat!</h2>
-        <div class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="text"
-            name="full-name" placeholder="Full Name">
+        <div
+          class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
+          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
+            type="text" name="full-name" placeholder="Full Name">
         </div>
-        <div class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="email" name="email"
-            placeholder="Email">
+        <div
+          class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
+          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
+            type="email" name="email" placeholder="Email">
         </div>
-        <div class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="tel"
+        <div
+          class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
+          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="tel"
             name="phone-number" placeholder="Phone Number">
         </div>
-        <div class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
+        <div
+          class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
           <p class="text-secondary text-[12px] sm:text-[18px] sm:mb-[-10px] z-[1]">Wedding Date</p>
-          <input class="w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="date" name="wedding-date"
-            placeholder="mm/dd/yyyy">
+          <input 
+            datepicker 
+            type="text" 
+            datepicker-orientation="top left" 
+            datepicker-autohide
+            class="text-center w-[338px] outline-none text-secondary text-[16px] sm:text-[24px]"
+            placeholder="mm/dd/yyyy"
+            name="wedding-date"
+            pattern="\d{1,2}/\d{1,2}/\d{4}"
+          >
         </div>
-        <div class="h-[84px] sm:h-[151px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <textarea class="w-full text-center outline-none text-secondary px-[32px] sm:px-0 text-[16px] sm:text-[24px] resize-none" name="letter"
-            placeholder="What would you like to remember the most about your wedding day?"></textarea>
+        <div
+          class="h-[84px] sm:h-[151px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
+          <textarea
+            class="w-full text-center outline-none text-secondary px-[32px] sm:px-0 text-[16px] sm:text-[24px] resize-none"
+            name="letter" placeholder="What would you like to remember the most about your wedding day?"></textarea>
         </div>
         <div class="pt-[34px] sm:pt-[40px] w-full">
           <p class="text-[16px] sm:text-[24px] text-secondary text-center">Package</p>
-          <div class="pl-[30%] pr-[5%] sm:px-0 gap-[25px] sm:gap-[5%] flex flex-col sm:flex-row justify-center items-start sm:items-end w-full mt-[14px]">
-            <label class="flex gap-[15px] items-start text-[24px] capitalize"><input
-                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors" type="checkbox" name="package-1">
+          <div
+            class="pl-[30%] pr-[5%] sm:px-0 gap-[25px] sm:gap-[5%] flex flex-col sm:flex-row justify-center items-start sm:items-end w-full mt-[14px]">
+            <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
+                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
+                type="checkbox" name="package-1">
               Package 1</label>
-            <label class="flex gap-[15px] items-start text-[24px] capitalize"><input
-                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors" type="checkbox" name="package-2">
+            <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
+                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
+                type="checkbox" name="package-2">
               Package 2</label>
-            <label class="flex gap-[15px] items-start text-[24px] capitalize"><input
-                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors" type="checkbox" name="package-3">
+            <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
+                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
+                type="checkbox" name="package-3">
               Package 3</label>
-            <label class="flex gap-[15px] items-start text-[24px] capitalize"><input
-                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors" type="checkbox"
-                name="package-custom"> I Need A Customized Package</label>
+            <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
+                class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
+                type="checkbox" name="package-custom"> I Need A Customized Package</label>
           </div>
         </div>
         <div class="mt-[48px] sm:mt-[54px]">
@@ -575,13 +593,17 @@
     <section class="flex gap-[57px] items-center justify-center">
       <a href="#" class="transition-colors text-primary-400 hover:text-primary-200 icon-youtube w-[33px] h-[33px]"></a>
       <a href="#" class="transition-colors text-primary-400 hover:text-primary-200 icon-facebook w-[33px] h-[33px]"></a>
-      <a href="#" class="transition-colors text-primary-400 hover:text-primary-200 icon-instagram w-[33px] h-[33px]"></a>
+      <a href="#"
+        class="transition-colors text-primary-400 hover:text-primary-200 icon-instagram w-[33px] h-[33px]"></a>
     </section>
     <section class="mt-[22px] sm:mt-[39px] bg-primary-200 px-[26px] py-[28px] sm:py-[10px]">
       <ul class="flex flex-col items-center gap-[20px] sm:gap-0 justify-between sm:flex-row">
-        <li><a href="#" class="transition-colors text-thirdly hover:text-white text-[13px]">Copyright (c) True Films. All rights reserved</a></li>
-        <li><a href="tel:+1818-696-3839" class="transition-colors text-thirdly hover:text-white text-[13px]">+1818-696-3839</a></li>
-        <li><a href="mailto:orders@truefilms.com" class="transition-colors text-thirdly hover:text-white text-[13px]">orders@truefilms.com</a></li>
+        <li><a href="#" class="transition-colors text-thirdly hover:text-white text-[13px]">Copyright (c) True Films.
+            All rights reserved</a></li>
+        <li><a href="tel:+1818-696-3839"
+            class="transition-colors text-thirdly hover:text-white text-[13px]">+1818-696-3839</a></li>
+        <li><a href="mailto:orders@truefilms.com"
+            class="transition-colors text-thirdly hover:text-white text-[13px]">orders@truefilms.com</a></li>
         <li><a href="#" class="transition-colors text-thirdly hover:text-white text-[13px]">Privacy police</a></li>
         <li><a href="#" class="transition-colors text-thirdly hover:text-white text-[13px]">FAQ</a></li>
         <li><a href="#" class="transition-colors text-thirdly hover:text-white text-[13px]">by LIDDWEB</a></li>
