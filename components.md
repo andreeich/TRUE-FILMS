@@ -1,16 +1,61 @@
+# Components
+
+## Button HEX
+
+```html
+<button class="btn-hex after:content-[attr(text2)] sm:after:content-[attr(text1)]" text1="Send message" text2="See our work">
+  <svg width="264px" height="112px" viewBox="0 0 264 112" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <polygon id="path-g-r5mtyqku-1"
+        points="253.76754 73.13178 253.76754 24.65118 126.88354 0.00013 126.88354 -1.77635684e-15 126.88354 0.00018 1.0658141e-14 28.75978 1.0658141e-14 77.24048 126.88354 101.89138 126.88354 101.89138 126.88354 101.89138">
+      </polygon>
+      <polygon id="path-g-r5mtyqku-3"
+        points="0 31.4268847 2.02938e-06 84.4036847 132 111.340985 264 79.9141847 264 26.9373847 132 2.24729699e-15">
+      </polygon>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g>
+        <g transform="translate(5.116460, 4.724605)">
+          <mask id="mask-g-r5mtyqku-2" fill="white">
+            <use xlink:href="#path-g-r5mtyqku-1"></use>
+          </mask>
+          <g></g>
+          <polygon class="btn-hex-overflow" fill="currentColor" mask="url(#mask-g-r5mtyqku-2)"
+            points="253.65054 73.13156 253.65054 24.65096 126.76754 -0.00014 -0.11646 28.75956 -0.11646 77.24026 126.76754 101.89125">
+          </polygon>
+        </g>
+        <g>
+          <mask id="mask-g-r5mtyqku-4" fill="white">
+            <use xlink:href="#path-g-r5mtyqku-3"></use>
+          </mask>
+          <g></g>
+          <path
+            d="M0,84.4036847 L-6,84.4036847 L-6,89.3029847 L-1.1997,90.2825847 L0,84.4036847 Z M0,31.4268847 L-1.38965,25.5900847 L-6,26.6876847 L-6,31.4268847 L0,31.4268847 Z M132,111.340985 L130.8,117.219985 L132.1,117.484985 L133.39,117.177985 L132,111.340985 Z M264,79.9141847 L265.39,85.7509847 L270,84.6533847 L270,79.9141847 L264,79.9141847 Z M264,26.9373847 L270,26.9373847 L270,22.0380847 L265.2,21.0584847 L264,26.9373847 Z M132,0 L133.2,-5.87883526 L131.9,-6.14398526 L130.61,-5.83685526 L132,0 Z M6,84.4036847 L6,31.4268847 L-6,31.4268847 L-6,84.4036847 L6,84.4036847 Z M133.2,105.461985 L1.1997,78.5248847 L-1.1997,90.2825847 L130.8,117.219985 L133.2,105.461985 Z M262.61,74.0772847 L130.61,105.503985 L133.39,117.177985 L265.39,85.7509847 L262.61,74.0772847 Z M258,26.9373847 L258,79.9141847 L270,79.9141847 L270,26.9373847 L258,26.9373847 Z M130.8,5.87883474 L262.8,32.8161847 L265.2,21.0584847 L133.2,-5.87883526 L130.8,5.87883474 Z M1.38965,37.2637847 L133.39,5.83685474 L130.61,-5.83685526 L-1.38965,25.5900847 L1.38965,37.2637847 Z"
+            id="Shape" fill="currentColor" fill-rule="nonzero" mask="url(#mask-g-r5mtyqku-4)"></path>
+        </g>
+      </g>
+    </g>
+  </svg>
+</button>
+```
+
+## datepicker.js
+
+```js
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define("Flowbite", [], factory);
-	else if(typeof exports === 'object')
-		exports["Flowbite"] = factory();
-	else
-		root["Flowbite"] = factory();
+ if(typeof exports === 'object' && typeof module === 'object')
+  module.exports = factory();
+ else if(typeof define === 'function' && define.amd)
+  define("Flowbite", [], factory);
+ else if(typeof exports === 'object')
+  exports["Flowbite"] = factory();
+ else
+  root["Flowbite"] = factory();
 })(self, function() {
 return /******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
+/******/  "use strict";
+/******/  var __webpack_modules__ = ({
 
 /***/ 482:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -3004,61 +3049,61 @@ exports["default"] = Events;
 
 /***/ })
 
-/******/ 	});
+/******/  });
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
+/******/  // The module cache
+/******/  var __webpack_module_cache__ = {};
+/******/  
+/******/  // The require function
+/******/  function __webpack_require__(moduleId) {
+/******/   // Check if module is in cache
+/******/   var cachedModule = __webpack_module_cache__[moduleId];
+/******/   if (cachedModule !== undefined) {
+/******/    return cachedModule.exports;
+/******/   }
+/******/   // Create a new module (and put it into the cache)
+/******/   var module = __webpack_module_cache__[moduleId] = {
+/******/    // no module.id needed
+/******/    // no module.loaded needed
+/******/    exports: {}
+/******/   };
+/******/  
+/******/   // Execute the module function
+/******/   __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/  
+/******/   // Return the exports of the module
+/******/   return module.exports;
+/******/  }
+/******/  
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
-/******/ 	
+/******/  /* webpack/runtime/define property getters */
+/******/  !function() {
+/******/   // define getter functions for harmony exports
+/******/   __webpack_require__.d = function(exports, definition) {
+/******/    for(var key in definition) {
+/******/     if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/      Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/     }
+/******/    }
+/******/   };
+/******/  }();
+/******/  
+/******/  /* webpack/runtime/hasOwnProperty shorthand */
+/******/  !function() {
+/******/   __webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/  }();
+/******/  
+/******/  /* webpack/runtime/make namespace object */
+/******/  !function() {
+/******/   // define __esModule on exports
+/******/   __webpack_require__.r = function(exports) {
+/******/    if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/     Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/    }
+/******/    Object.defineProperty(exports, '__esModule', { value: true });
+/******/   };
+/******/  }();
+/******/  
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -3112,8 +3157,9 @@ function initDatepickers() {
 var events = new _dom_events__WEBPACK_IMPORTED_MODULE_2__["default"]('DOMContentLoaded', [initDatepickers]);
 events.init();
 }();
-/******/ 	return __webpack_exports__;
+/******/  return __webpack_exports__;
 /******/ })()
 ;
 });
 //# sourceMappingURL=datepicker.js.map
+```

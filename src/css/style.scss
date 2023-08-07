@@ -129,7 +129,7 @@
     @apply absolute top-1/2 z-[1] -translate-y-1/2 sm:hidden;
     svg {
       @apply sm:w-[51px] sm:h-[51px] w-[20px] h-[20px] transition-all;
-      fill: #7A9F8F;
+      fill: #7a9f8f;
     }
 
     &:hover {
@@ -149,7 +149,6 @@
   .splide__arrow--next {
     @apply right-[16px];
   }
-
 }
 .splide.splide--stories {
   @apply relative;
@@ -157,7 +156,7 @@
     @apply absolute sm:bottom-[30px] sm:top-auto sm:translate-y-0 z-[1] top-[40%] -translate-y-1/2;
     svg {
       @apply sm:w-[51px] sm:h-[51px] w-[20px] h-[20px] transition-all;
-      fill: #7A9F8F;
+      fill: #7a9f8f;
     }
 
     &:hover {
@@ -177,14 +176,13 @@
   .splide__arrow--next {
     @apply right-[24px];
   }
-
 }
 
 // datepicker
-.datepicker-controls{
+.datepicker-controls {
   @apply flex-1;
   .view-switch {
-    @apply flex items-center justify-center flex-1 text-center px-[30px];
+    @apply flex items-center justify-center flex-1 text-center px-[20px];
     span {
       @apply flex-1;
     }

@@ -32,15 +32,15 @@
           <div class="flex items-stretch justify-center flex-1 sm:items-center">
             <div class="hidden mx-2 sm:block">
               <ul class="flex space-x-[20px] md:space-x-[30px] lg:space-x-[47px]">
-                <li class="inline-flex items-center"><a href="#"
+                <li class="inline-flex items-center"><a href="#about-section"
                     class="transition-colors text-primary-400 hover:text-primary-200">About</a></li>
-                <li class="inline-flex items-center"><a href="#"
+                <li class="inline-flex items-center"><a href="#portfolio-section"
                     class="transition-colors text-primary-400 hover:text-primary-200">Portfolio</a></li>
-                <li class="inline-flex items-center"><a href="#"
+                <li class="inline-flex items-center"><a href="#packages-section"
                     class="transition-colors text-primary-400 hover:text-primary-200">Packages</a></li>
-                <li class="inline-flex items-center"><a href="#"
+                <li class="inline-flex items-center"><a href="#reviews-section"
                     class="transition-colors text-primary-400 hover:text-primary-200">Reviews</a></li>
-                <li class="inline-flex items-center"><a href="#"
+                <li class="inline-flex items-center"><a href="#contact-section"
                     class="transition-colors text-primary-400 hover:text-primary-200">Contact Us</a></li>
               </ul>
             </div>
@@ -68,15 +68,19 @@
           id="mobile-menu">
           <div class="flex flex-col items-center justify-between h-full pt-[25px] pb-[55px] px-[60px]">
             <ul class="text-center space-y-[35px]">
-              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">About</a>
+              <li><a href="#about-section"
+                  class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">About</a>
               </li>
-              <li><a href="#"
+              <li><a href="#portfolio-section"
                   class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Portfolio</a></li>
-              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Packages</a>
+              <li><a href="#packages-section"
+                  class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Packages</a>
               </li>
-              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Reviews</a>
+              <li><a href="#reviews-section"
+                  class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Reviews</a>
               </li>
-              <li><a href="#" class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Contacts</a>
+              <li><a href="#contact-section"
+                  class="text-primary-400 hover:text-primary-200 text-[24px] transition-colors">Contacts</a>
               </li>
             </ul>
             <ul class="flex items-center justify-center gap-[69px] w-full">
@@ -144,7 +148,7 @@
         </button>
       </div>
     </section>
-    <section class="flex flex-col sm:grid sm:grid-cols-[0.9fr_1.1fr]">
+    <section id="about-section" class="flex flex-col sm:grid sm:grid-cols-[0.9fr_1.1fr]">
       <div
         class="flex flex-col gap-[20px] sm:pt-[67px] sm:pl-[24px] sm:pr-[53px] sm:pb-[50px] text-center sm:text-start pt-[20px] px-[60px] pb-[70px]">
         <h2 class="">About Us</h2>
@@ -160,7 +164,7 @@
           src="./assets/images/jakob-owens-dqpp-9-rvlygq-unsplash-1.jpg" alt="about us picture">
       </div>
     </section>
-    <section class="flex flex-col">
+    <section id="portfolio-section" class="flex flex-col">
       <div class="text-center space-y-[16px] sm:space-y-[20px] pt-[20px] sm:pt-[93px] px-[60px]">
         <h3>Portfolio</h3>
         <p>
@@ -265,7 +269,7 @@
         </button>
       </div>
     </section>
-    <section class="flex flex-col">
+    <section id="packages-section" class="flex flex-col">
       <div class="space-y-[16px] sm:space-y-[20px] text-center sm:w-1/2 mx-auto px-[60px]">
         <h2>Packages</h2>
         <p>
@@ -446,7 +450,7 @@
       </div>
     </section>
     our approach
-    <section class="flex flex-col-reverse sm:grid sm:grid-cols-2">
+    <section id="reviews-section" class="flex flex-col-reverse sm:grid sm:grid-cols-2">
       <div class="aspect-[343/361] px-[16px] sm:px-0 sm:aspect-auto">
         <img class="object-cover object-center h-full" src="./assets/images/rectangle-20.jpg" alt="Stories figure">
       </div>
@@ -490,37 +494,33 @@
         </section>
       </div>
     </section>
-    <section class="pt-[88px] sm:pt-[130px] pb-[105px]">
+    <section id="contact-section" class="pt-[88px] sm:pt-[130px] pb-[105px]">
       <form class="flex flex-col items-center px-[16px]">
         <h2>Let's Chat!</h2>
         <div
           class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
-            type="text" name="full-name" placeholder="Full Name">
+          <input
+            class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
+            type="text" name="full-name" placeholder="Full Name" required>
         </div>
         <div
           class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
-            type="email" name="email" placeholder="Email">
+          <input
+            class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
+            type="email" name="email" placeholder="Email" required>
         </div>
         <div
           class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
-          <input class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]" type="tel"
-            name="phone-number" placeholder="Phone Number">
+          <input
+            class="placeholder:capitalize w-full text-center outline-none text-secondary text-[16px] sm:text-[24px]"
+            type="tel" name="phone-number" placeholder="Phone Number">
         </div>
         <div
           class="h-[52px] sm:h-[77px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
           <p class="text-secondary text-[12px] sm:text-[18px] sm:mb-[-10px] z-[1]">Wedding Date</p>
-          <input 
-            datepicker 
-            type="text" 
-            datepicker-orientation="top left" 
-            datepicker-autohide
+          <input datepicker type="text" datepicker-orientation="top left" datepicker-autohide
             class="text-center w-[338px] outline-none text-secondary text-[16px] sm:text-[24px]"
-            placeholder="mm/dd/yyyy"
-            name="wedding-date"
-            pattern="\d{1,2}/\d{1,2}/\d{4}"
-          >
+            placeholder="mm/dd/yyyy" name="wedding-date" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
         </div>
         <div
           class="h-[84px] sm:h-[151px] flex flex-col justify-end items-center border-b border-b-primary-200 w-full sm:w-[60%]">
@@ -550,7 +550,7 @@
           </div>
         </div>
         <div class="mt-[48px] sm:mt-[54px]">
-          <button class="btn-hex after:content-[attr(text)]" text="Send message">
+          <button type="submit" class="btn-hex after:content-[attr(text)]" text="Send message">
             <svg width="264px" height="112px" viewBox="0 0 264 112" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>

@@ -26,7 +26,7 @@
   },
   "scripts": {
     "dev": "yarn clean && parcel",
-    "build": "yarn clean && yarn parcel build --no-source-maps --no-cache",
+    "build": "yarn clean && yarn parcel build",
     "clean": "rm -rf dist && rm -rf .parcel-cache"
   },
   "parcel-namer-custom": {
@@ -43,6 +43,8 @@
     "breakpoint-helper": "^2.0.4",
     "breakpoints-js": "^1.0.6",
     "flowbite": "^1.8.1",
-    "throttle-debounce": "^5.0.0"
+    "gsap": "^3.12.2",
+    "throttle-debounce": "^5.0.0",
+    "xtendui": "^1.4.0"
   }
 }
