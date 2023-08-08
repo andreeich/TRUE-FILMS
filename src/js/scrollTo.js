@@ -28,7 +28,7 @@ const setupScrollTo = (selector, mobileMenuId) => {
       };
       item.addEventListener('click', scroll);
     } catch (error) {
-      console.warn(error);
+      // console.warn(error);
     }
   });
 };

@@ -188,3 +188,21 @@
     }
   }
 }
+
+.appr {
+  .appr__head {
+    @apply text-[24px] leading-[150%] sm:text-[56px] text-primary-200 transition-all ease-linear duration-500;
+  }
+  .appr__desc {
+    @apply text-[18px] text-primary-300 w-3/5 sm:w-1/2 invisible mx-auto opacity-0 transition-all duration-500 mt-[-25%] sm:mt-[-5%];
+  }
+
+  &.active {
+    .appr__head {
+      @apply leading-[300%] scale-[198%] sm:scale-[216%] text-primary-300;
+    }
+    .appr__desc {
+      @apply visible opacity-100 mb-[56px] sm:mb-[60px] mt-0;
+    }
+  }
+}

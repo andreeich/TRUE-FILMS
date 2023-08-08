@@ -28,6 +28,9 @@ module.exports = {
       boxShadow: {
         card: '11px 11px 24px 0px rgba(122, 159, 143, 0.10)',
       },
+      transitionProperty: {
+        text: 'font-size, color',
+      },
     },
   },
   plugins: [
