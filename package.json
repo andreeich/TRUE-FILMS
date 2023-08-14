@@ -27,7 +27,8 @@
   },
   "scripts": {
     "dev": "yarn clean && parcel",
-    "build": "yarn clean && yarn parcel build",
+    "prebuild": "yarn clean && yarn parcel build",
+    "build": "yarn clean && yarn parcel build --no-optimize --no-content-hash --no-source-maps --detailed-report",
     "clean": "rm -rf dist && rm -rf .parcel-cache"
   },
   "parcel-namer-custom": {

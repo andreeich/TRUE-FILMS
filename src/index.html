@@ -21,7 +21,7 @@
 
 <body class="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen relative [--navbar-height:81px]">
   <header>
-    <nav class="fixed z-10 w-full bg-white sm:bg-transparent">
+    <nav class="fixed z-10 w-full bg-white sm:absolute sm:bg-transparent">
       <div class="px-[24px] mx-auto max-w-[1536px]">
         <div class="relative flex items-center justify-between h-[var(--navbar-height)]">
           <!-- desktop links -->
@@ -151,7 +151,7 @@
         </button>
       </div>
       <video class="absolute inset-0 object-cover object-center w-full h-full" autoplay playsinline muted loop preload="auto" width="640"
-        height="264">
+        height="264" poster="./assets/images/home-video-poster.jpg">
         <source src="./assets/videos/home-video.mp4" type="video/mp4" />
       </video>
     </section>
@@ -174,7 +174,7 @@
     <section id="portfolio-section" class="flex flex-col">
       <button id="btn-up" data-aos="fade-in" data-aos-mirror="false" data-aos-offset="10" data-aos-duration="400"
         data-aos-anchor-placement="top-center"
-        class="fixed bottom-[16px] right-[27px] sm:bottom-[50px] sm:right-[57px] z-[1] text-primary-100 hover:text-primary-200 sm:text-primary-300 sm:hover:text-primary-400 transition">
+        class="fixed max-sm:hidden bottom-[16px] right-[27px] sm:bottom-[50px] sm:right-[57px] z-[1] text-primary-100 hover:text-primary-200 sm:text-primary-300 sm:hover:text-primary-400 transition">
         <svg width="25" height="51" viewBox="0 0 25 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.1244 0L24.2487 51L0 51L12.1244 0Z" fill="currentColor" />
         </svg>
@@ -189,17 +189,23 @@
         <img class="max-w-[1536px] w-full mx-auto" src="./assets/images/videos.svg" alt="Videos">
       </div>
       <div class="mt-[-22px] sm:mt-[-70px]">
-        <section class="splide splide--carousel splide--carousel-base">
+        <section class="splide splide--carousel splide--carousel-base splide--carousel-base--video">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="./assets/images/rectangle-29.jpg" alt="">
+              <li class="relative splide__slide">
+                <video src="./assets/videos/home-video.mp4" playsinline muted loop preload="auto" poster="./assets/images/home-video-poster.jpg"></video>
+                <button class="absolute text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 play-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-play"></span></button>
+                <button class="absolute hidden text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 pause-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-pause"></span></button>
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/rectangle-29.jpg" alt="">
+                <video src="./assets/videos/home-video.mp4" playsinline muted loop preload="auto" poster="./assets/images/home-video-poster.jpg"></video>
+                <button class="absolute text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 play-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-play"></span></button>
+                <button class="absolute hidden text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 pause-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-pause"></span></button>
               </li>
               <li class="splide__slide">
-                <img src="./assets/images/rectangle-29.jpg" alt="">
+                <video src="./assets/videos/home-video.mp4" playsinline muted loop preload="auto" poster="./assets/images/home-video-poster.jpg"></video>
+                <button class="absolute text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 play-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-play"></span></button>
+                <button class="absolute hidden text-white transition-opacity -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 pause-btn hover:opacity-70"><span class="w-10 h-10 sm:w-20 sm:h-20 icon-pause"></span></button>
               </li>
             </ul>
           </div>
@@ -229,7 +235,7 @@
             </ul>
           </div>
         </section>
-        <section class="splide splide--carousel splide--carousel-mini">
+        <section class="splide splide--carousel splide--carousel-mini" data-splide='{"direction":"rtl"}'>
           <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
@@ -464,7 +470,7 @@
       </div>
     </section>
     <section id="approach-section"
-      class="relative flex items-center justify-center pt-[60px] sm:pt-[80px] pb-[90px] sm:pb-[200px] bg-[url('../assets/images/ourapproach.svg')] bg-contain bg-[center_30%] bg-fixed bg-no-repeat min-h-screen">
+      class="relative overflow-hidden flex items-center justify-center pt-[60px] sm:pt-[80px] pb-[90px] sm:pb-[200px] bg-[url('../assets/images/ourapproach.svg')] bg-contain bg-[center_30%] bg-fixed bg-no-repeat min-h-screen">
       <!-- <div class="absolute inset-0 w-full">
         <img class="max-w-[1536px] w-full mx-auto" src="./assets/images/ourapproach.svg" alt="Our Approach">
       </div> -->
@@ -508,15 +514,17 @@
       </div>
     </section>
     <section id="reviews-section" class="flex flex-col-reverse sm:grid sm:grid-cols-2">
-      <div class="aspect-[343/361] px-[16px] sm:px-0 sm:aspect-auto">
-        <img class="object-cover object-center h-full" src="./assets/images/rectangle-20.jpg" alt="Stories figure">
+      <div class="aspect-[343/361] px-[16px] sm:px-0 sm:aspect-auto relative">
+        <img data-splide-image="1" class="absolute inset-0 object-cover object-center h-full" src="./assets/images/rectangle-20.jpg" alt="Stories figure">
+        <img data-splide-image="2" class="absolute inset-0 object-cover object-center h-full opacity-0" src="./assets/images/rectangle-20.jpg" alt="Stories figure">
+        <img data-splide-image="3" class="absolute inset-0 object-cover object-center h-full opacity-0" src="./assets/images/rectangle-20.jpg" alt="Stories figure">
       </div>
       <div class="flex flex-col">
         <h3 class="text-center">Stories</h3>
         <section class="flex-grow splide splide--stories pt-[10px] pb-[18px] sm:py-[100px]">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide">
+              <li class="splide__slide" data-splide="1">
                 <section class="py-[30px]">
                   <p
                     class="sm:text-[24px] text-[16px] text-center sm:text-start relative after:content-[''] after:icon-quote-open after:text-primary-400 after:absolute after:left-[-15px] sm:after:left-[-35px] after:top-[-20px] after:w-[40px] after:h-[37px] sm:after:w-[45px] sm:after:h-[42px] before:content-[''] before:icon-quote-close before:text-primary-400 before:absolute before:right-[-5px] before:bottom-[-23px] before:w-[40px] before:h-[47px] sm:before:w-[45px] sm:before:h-[42px]">
@@ -526,7 +534,7 @@
                   <p class="sm:text-[18px] text-[14px] text-center sm:text-right mt-[40px]">Andrew&Stella</p>
                 </section>
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide" data-splide="2">
                 <section class="py-[30px]">
                   <p
                     class="sm:text-[24px] text-[16px] text-center sm:text-start relative after:content-[''] after:icon-quote-open after:text-primary-400 after:absolute after:left-[-15px] sm:after:left-[-35px] after:top-[-20px] after:w-[40px] after:h-[37px] sm:after:w-[45px] sm:after:h-[42px] before:content-[''] before:icon-quote-close before:text-primary-400 before:absolute before:right-[-5px] before:bottom-[-23px] before:w-[40px] before:h-[47px] sm:before:w-[45px] sm:before:h-[42px]">
@@ -536,7 +544,7 @@
                   <p class="sm:text-[18px] text-[14px] text-center sm:text-right mt-[40px]">Andrew&Stella</p>
                 </section>
               </li>
-              <li class="splide__slide">
+              <li class="splide__slide" data-splide="3">
                 <section class="py-[30px]">
                   <p
                     class="sm:text-[24px] text-[16px] text-center sm:text-start relative after:content-[''] after:icon-quote-open after:text-primary-400 after:absolute after:left-[-15px] sm:after:left-[-35px] after:top-[-20px] after:w-[40px] after:h-[37px] sm:after:w-[45px] sm:after:h-[42px] before:content-[''] before:icon-quote-close before:text-primary-400 before:absolute before:right-[-5px] before:bottom-[-23px] before:w-[40px] before:h-[47px] sm:before:w-[45px] sm:before:h-[42px]">
@@ -591,19 +599,19 @@
             class="pl-[30%] pr-[5%] sm:px-0 gap-[25px] sm:gap-[5%] flex flex-col sm:flex-row justify-center items-start sm:items-end w-full mt-[14px]">
             <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
                 class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
-                type="checkbox" name="package-1">
+                type="radio" name="package" checked>
               Package 1</label>
             <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
                 class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
-                type="checkbox" name="package-2">
+                type="radio" name="package">
               Package 2</label>
             <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
                 class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
-                type="checkbox" name="package-3">
+                type="radio" name="package">
               Package 3</label>
             <label class="flex gap-[15px] items-start text-[24px] placeholder:capitalize"><input
                 class="appearance-none rounded-none mt-[7px] w-[23px] h-[23px] border border-primary-300 flex-shrink-0 after:content-[''] checked:after:icon-check-mark after:text-white after:absolute relative after:inset-[2px] checked:after:w-[18px] checked:after:h-[18px] checked:bg-primary-300 transition-colors"
-                type="checkbox" name="package-custom"> I Need A Customized Package</label>
+                type="radio" name="package"> I Need A Customized Package</label>
           </div>
         </div>
         <div class="mt-[48px] sm:mt-[54px]">

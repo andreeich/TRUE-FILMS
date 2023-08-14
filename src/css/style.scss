@@ -52,6 +52,12 @@
   .icon-check-mark {
     @apply icon-[custom--check-mark] icon;
   }
+  .icon-play {
+    @apply icon-[heroicons--play] icon;
+  }
+  .icon-pause {
+    @apply icon-[heroicons--pause] icon;
+  }
 
   .btn-hex {
     @apply w-[166px] h-[70px] sm:w-[264px] sm:h-[112px] relative text-white z-[1];
@@ -88,7 +94,7 @@
 .splide.splide--carousel {
   @apply relative;
   .splide__slide {
-    img {
+    img, video {
       @apply object-cover object-center h-full;
     }
   }
@@ -115,12 +121,6 @@
   }
   .splide__arrow--next {
     @apply right-[20px];
-  }
-
-  &.splide--carousel-mini {
-    .splide__slide {
-      @apply aspect-[144/192] sm:aspect-auto;
-    }
   }
 }
 .splide.splide--packages {

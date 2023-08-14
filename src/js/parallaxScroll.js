@@ -8,7 +8,7 @@ const setupParallaxScroll = () => {
   new ScrollMagic.Scene({
     triggerElement: container,
     triggerHook: 'onLeave',
-    duration: '100%',
+    duration: '3000',
   })
     .addTo(controller)
     .setPin(container)
