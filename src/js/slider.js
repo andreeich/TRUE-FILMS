@@ -49,6 +49,15 @@ splideCarousel.forEach((splide) => {
     video.addEventListener('dblclick', () => {
       video.requestFullscreen();
     });
+    video.addEventListener('play', () => {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      }
+    });
   });
 });
 
@@ -92,10 +101,10 @@ splidePackages.forEach((splide) => {
         padding: { left: '52px', right: '52px' },
         drag: true,
       },
-      991: {
-        perPage: 2,
-        drag: true,
-      },
+      // 991: {
+      //   perPage: 2,
+      //   drag: true,
+      // },
     },
   }).mount();
 });

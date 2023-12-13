@@ -94,7 +94,8 @@
 .splide.splide--carousel {
   @apply relative;
   .splide__slide {
-    img, video {
+    img,
+    video {
       @apply object-cover object-center h-full;
     }
   }
@@ -125,6 +126,14 @@
 }
 .splide.splide--packages {
   @apply relative;
+  .splide__list {
+    @apply sm:grid sm:grid-cols-3 sm:gap-[24px];
+  }
+  .splide__slide {
+    @media (min-width: 640px) {
+      width: 100% !important;
+    }
+  }
   .splide__arrow {
     @apply absolute top-1/2 z-[1] -translate-y-1/2 sm:hidden;
     svg {
@@ -191,18 +200,25 @@
 
 .appr {
   .appr__head {
-    @apply text-[24px] leading-[150%] sm:text-[56px] text-primary-200 transition-all ease-linear duration-500;
+    @apply text-[24px] leading-[150%] sm:text-[28px] text-primary-200 transition-all ease-linear duration-500;
   }
   .appr__desc {
-    @apply text-[18px] text-primary-300 w-3/5 sm:w-1/2 invisible mx-auto opacity-0 transition-all duration-500 mt-[-25%] sm:mt-[-5%];
+    @apply flex text-[18px] text-primary-300 w-3/5 sm:w-1/2 mx-auto opacity-0 transition-all duration-500;
+
+    span {
+      @apply mt-[-100%] scale-0 transition-all duration-500;
+    }
   }
 
   &.active {
     .appr__head {
-      @apply leading-[300%] scale-[198%] sm:scale-[216%] text-primary-300;
+      @apply leading-[120%] scale-[120%] sm:scale-[190%] sm:leading-[190%] md:scale-[260%] md:leading-[260%] lg:scale-[340%] lg:leading-[340%] text-primary-300 mb-[11px] sm:mb-[20px] lg:mb-[40px];
     }
     .appr__desc {
-      @apply visible opacity-100 mb-[56px] sm:mb-[60px] mt-0;
+      @apply delay-500 opacity-100;
+      span {
+        @apply mt-0 scale-100;
+      }
     }
   }
 }
