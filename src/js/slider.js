@@ -155,3 +155,24 @@ splideStories.forEach((splide) => {
     setCurrentSplideStoriesImage(activeSplideImage);
   });
 });
+const splideApproach = document.querySelectorAll('.splide.splide--approach');
+
+splideApproach.forEach((splide) => {
+  new Splide(splide, {
+    perPage: 3,
+    gap: '24px',
+    // arrowPath: 'M40 19.509l-40 9.51V10z',
+    pagination: false,
+    arrows: false,
+    drag: false,
+    padding: { left: '24px', right: '24px' },
+    breakpoints: {
+      640: {
+        perPage: 1, padding: { right: '15%' },
+      },
+      991: {
+        perPage: 2, drag: 'true', padding: { right: '10%' },
+      },
+    },
+  }).mount();
+});
